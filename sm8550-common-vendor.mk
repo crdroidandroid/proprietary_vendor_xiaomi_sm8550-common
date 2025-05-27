@@ -1182,6 +1182,7 @@ PRODUCT_PACKAGES += \
     TrustedUIService \
     com.qualcomm.qti.gpudrivers.kalama.api33 \
     uimgbaservice \
+    EuiccGoogle \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
     HotwordEnrollmentYGoogleHEXAGON_WIDEBAND \
     ImsRcsService \

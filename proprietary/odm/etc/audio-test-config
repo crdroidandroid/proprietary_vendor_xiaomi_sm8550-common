@@ -46,8 +46,9 @@ B ASPTX Ref:None
 #enable_receiver
 enable
 T PCM Source:ASP
-T AMP PCM Gain:5
+T AMP PCM Gain:16
 T AMP Enable Switch:1
+T Enable RCV Pin Control:1
 T ASPTX Ref:Ref
 
 #disable_receiver
@@ -55,7 +56,9 @@ disable
 T PCM Source:None
 T AMP PCM Gain:18
 T AMP Enable Switch:0
+T Enable RCV Pin Control:0
 T ASPTX Ref:None
+
 
 #playback_headphone
 enable

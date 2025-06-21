@@ -27,8 +27,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8550-common/proprietary/odm/etc/audio/top_spk.wav:$(TARGET_COPY_OUT_ODM)/etc/audio/top_spk.wav \
     vendor/xiaomi/sm8550-common/proprietary/odm/etc/audio/top_spk_hp.wav:$(TARGET_COPY_OUT_ODM)/etc/audio/top_spk_hp.wav \
     vendor/xiaomi/sm8550-common/proprietary/odm/etc/backend_conf.xml:$(TARGET_COPY_OUT_ODM)/etc/backend_conf.xml \
-    vendor/xiaomi/sm8550-common/proprietary/odm/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_ODM)/etc/dolby/dax-default.xml \
-    vendor/xiaomi/sm8550-common/proprietary/odm/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_ODM)/etc/dolby_vision.cfg \
     vendor/xiaomi/sm8550-common/proprietary/odm/etc/init/android.hardware.gnss-aidl-service-qti.rc:$(TARGET_COPY_OUT_ODM)/etc/init/android.hardware.gnss-aidl-service-qti.rc \
     vendor/xiaomi/sm8550-common/proprietary/odm/etc/init/android.hardware.nfc@1.2-service-st.rc:$(TARGET_COPY_OUT_ODM)/etc/init/android.hardware.nfc@1.2-service-st.rc \
     vendor/xiaomi/sm8550-common/proprietary/odm/etc/init/init.cirrus.rc:$(TARGET_COPY_OUT_ODM)/etc/init/init.cirrus.rc \
@@ -45,6 +43,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8550-common/proprietary/odm/etc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_ODM)/etc/libnfc-nxp_RF.conf \
     vendor/xiaomi/sm8550-common/proprietary/odm/etc/media_profiles_kalama.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_kalama.xml \
     vendor/xiaomi/sm8550-common/proprietary/odm/etc/permissions/android.hardware.nfc.beam.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.nfc.beam.xml \
+    vendor/xiaomi/sm8550-common/proprietary/odm/etc/ueventd.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc \
     vendor/xiaomi/sm8550-common/proprietary/odm/firmware/a740_zap.b00:$(TARGET_COPY_OUT_ODM)/firmware/a740_zap.b00 \
     vendor/xiaomi/sm8550-common/proprietary/odm/firmware/a740_zap.b01:$(TARGET_COPY_OUT_ODM)/firmware/a740_zap.b01 \
     vendor/xiaomi/sm8550-common/proprietary/odm/firmware/a740_zap.b02:$(TARGET_COPY_OUT_ODM)/firmware/a740_zap.b02 \
@@ -78,7 +77,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8550-common/proprietary/product/etc/permissions/UimGbaManager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGbaManager.xml \
     vendor/xiaomi/sm8550-common/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
     vendor/xiaomi/sm8550-common/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
-    vendor/xiaomi/sm8550-common/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/xiaomi/sm8550-common/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
     vendor/xiaomi/sm8550-common/proprietary/system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
     vendor/xiaomi/sm8550-common/proprietary/system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.ims.rcsservice.xml \
@@ -94,13 +92,31 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/kalama_grd/GRD_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/kalama_grd/GRD_workspaceFileXml.qwsp \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/kalama_qrd/QRD_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/kalama_qrd/QRD_acdb_cal.acdb \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/kalama_qrd/QRD_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/kalama_qrd/QRD_workspaceFileXml.qwsp \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.7_enpu3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.7_enpu3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.6.3_0.0__3.0.0_0.0__3.1.1.0_0.0__3.2.0_0.0__eai_2.7_enpu_v3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.6.3_0.0__3.0.0_0.0__3.1.1.0_0.0__3.2.0_0.0__eai_2.7_enpu_v3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.6.3_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.6.3_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_2.10_enpuv3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.6.5_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.6.5_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.6.5_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.6.5_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.7.20_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.7.20_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.7.5_0.0__3.0.0_0.0__3.1.1.0_0.0__3.2.0_0.0__eai_2.7_enpu_v3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.7.5_0.0__3.0.0_0.0__3.1.1.0_0.0__3.2.0_0.0__eai_2.7_enpu_v3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.7.5_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.7.5_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_2.10_enpuv3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.7.8_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.7.8_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.7.8_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.7.8_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.7.8_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.7.8_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_2.10_enpuv3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__4.8.2_0.0__3.0.0_0.0__3.1.1.0_0.0__3.2.0_0.0__eai_2.7_enpu_v3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__4.8.2_0.0__3.0.0_0.0__3.1.1.0_0.0__3.2.0_0.0__eai_2.7_enpu_v3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__4.8.3_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__4.8.3_0.0__3.0.0_0.0__3.1.0_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__4.8.4_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__4.8.4_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.0__eai_2.10_enpuv3.pmd \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__4.8.4_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__4.8.4_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_2.10_enpuv3.pmd \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_2.10_enpuv3.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_2.10_enpuv3.pmd \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/audio_diag.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/audio_diag.cfg \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/batching.conf:$(TARGET_COPY_OUT_VENDOR)/etc/batching.conf \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/camera/placeholder_camera.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/placeholder_camera.txt \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/card-defs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/card-defs.xml \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/chre/preloaded_nanoapps.json:$(TARGET_COPY_OUT_VENDOR)/etc/chre/preloaded_nanoapps.json \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
@@ -256,12 +272,14 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2audio@1.0-service.rc \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vendor.qti.qegahal-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.qegahal-service.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.qspmhal@1.0-service.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vendor.qti.secure_element@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.secure_element@1.2-service.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vendor.xiaomi.modem.qms@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.modem.qms@1.0-service.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/init/wfdvndservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wfdvndservice.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/kvh2xml.xml:$(TARGET_COPY_OUT_VENDOR)/etc/kvh2xml.xml \
@@ -302,7 +320,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/media_kalama/video_system_specs.json:$(TARGET_COPY_OUT_VENDOR)/etc/media_kalama/video_system_specs.json \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/misound_asc_model.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/misound_asc_model.tflite \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/models/acd/event.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/event.eai \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/models/acd/music.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/music.eai \
@@ -344,6 +361,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/pwr/PowerFeatureConfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pwr/PowerFeatureConfig.xml \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/pwr/StandbyFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pwr/StandbyFeature.xml \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/pwr/VideoPowerOptFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pwr/VideoPowerOptFeature.xml \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/qcril_database/qcrilNr.db:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/qcrilNr.db \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/qcril_database/upgrade/config/10.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/10.0_config.sql \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/qcril_database/upgrade/config/11.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/11.0_config.sql \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/qcril_database/upgrade/config/12.0_config.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/config/12.0_config.sql \
@@ -358,6 +376,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/qcril_database/upgrade/other/10_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/10_version_update_ecc_table.sql \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/qcril_database/upgrade/other/11_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/11_version_update_ecc_table.sql \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/qcril_database/upgrade/other/12_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/12_version_update_ecc_table.sql \
+    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/qcril_database/upgrade/other/13_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/13_version_update_ecc_table.sql \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql \
@@ -401,8 +420,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/st54k_conf_38.4MHz.txt:$(TARGET_COPY_OUT_VENDOR)/etc/st54k_conf_38.4MHz.txt \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/telephony_packages.xml:$(TARGET_COPY_OUT_VENDOR)/etc/telephony_packages.xml \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/thermal-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-map.conf \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/etc/thermald-devices.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald-devices.conf \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/tzlog.dict:$(TARGET_COPY_OUT_VENDOR)/etc/tzlog.dict \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
@@ -415,19 +432,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/wifi/vendor_cmd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/vendor_cmd.xml \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/xiaomi/sm8550-common/proprietary/vendor/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a615_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a615_zap.b00 \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a615_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a615_zap.b01 \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a615_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a615_zap.b02 \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a615_zap.elf \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a615_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a615_zap.mdt \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a630_gmu.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a630_gmu.bin \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a630_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a630_sqe.fw \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a702_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a702_sqe.fw \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a702_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a702_zap.b00 \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a702_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a702_zap.b01 \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a702_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a702_zap.b02 \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a702_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a702_zap.elf \
-    vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a702_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a702_zap.mdt \
     vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a740_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a740_sqe.fw \
     vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a740_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a740_zap.b00 \
     vendor/xiaomi/sm8550-common/proprietary/vendor/firmware/a740_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a740_zap.b01 \
@@ -502,10 +506,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl-qti \
     android.hardware.gnss-aidl-impl-qti \
     audio.bluetooth_qti.default \
-    audio.primary.kalama \
     com.dsi.ant@1.0-impl \
-    gyro_fusion_interface \
-    sound_trigger.primary.kalama \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.bluetooth_audio@2.0-impl \
     vendor.qti.hardware.bluetooth_audio@2.1-impl \
@@ -521,7 +522,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.soter@1.0-impl \
     vulkan.adreno \
     lib-imscommon \
-    lib-imsdcservice \
     lib-imsdpl \
     lib-imsqimf \
     lib-imsrcsservice \
@@ -575,11 +575,9 @@ PRODUCT_PACKAGES += \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
-    libagm \
     libaodoptfeature \
     libapengine \
     libappclassifier \
-    libar-pal \
     libaudio_log_utils \
     libaudiocloudctrl \
     libbacklight-calib \
@@ -621,7 +619,6 @@ PRODUCT_PACKAGES += \
     libdisplayqos \
     libdisplayskuutils \
     libdlbdsservice \
-    libdlbpreg \
     libdolbyottcameracontrol \
     libdpmqmihal \
     libdpps \
@@ -814,7 +811,6 @@ PRODUCT_PACKAGES += \
     libqmiextservices \
     libqmiservices \
     libqms_client \
-    libqms_xiaomi \
     libqnnengine \
     libqrtr \
     libqrtrclient \
@@ -883,7 +879,6 @@ PRODUCT_PACKAGES += \
     libssd \
     libstandbyfeature \
     libstfactory-vendor \
-    libswspatializer_ext \
     libsynergy_loc_api \
     libsys_info_cache \
     libsystem_health_mon \
@@ -955,14 +950,10 @@ PRODUCT_PACKAGES += \
     se_nq_extn_client \
     sensors.ssc \
     libasphere \
-    libdlbvol \
-    libhwdap \
     libmisoundfx \
     libquasar \
     libshoebox \
-    libspatializer \
     libswgamedap \
-    libswspatializer \
     libswvqe \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
@@ -1035,7 +1026,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.limits@1.1 \
     vendor.qti.hardware.limits@1.2 \
     vendor.qti.hardware.mwqemadapter@1.0 \
-    vendor.qti.hardware.pal@1.0-impl \
     vendor.qti.hardware.power.powermodule@1.0 \
     vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.qccsyshal@1.1 \
@@ -1127,6 +1117,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.memory.pasrmanager@1.0 \
     vendor.qti.memory.pasrmanager@1.1 \
     vendor.qti.power.pasrmanager@1.0 \
+    vendor.qti.qegahal-V1-ndk_platform \
+    vendor.qti.qegahal-impl \
     vendor.qti.qesdhal@1.0 \
     vendor.qti.qesdhal@1.1 \
     vendor.qti.qesdhal@1.2 \
@@ -1136,6 +1128,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspmhal@1.0-impl \
     vendor.qti.qspmhal@1.0 \
     vendor.xiaomi.hardware.blackbox-V1-ndk \
+    vendor.xiaomi.modem.qms@1.0 \
     vendor.xiaomi.sensor.citsensorservice@1.1 \
     vendor.xiaomi.sensor.citsensorservice@2.0 \
     lib-imsvideocodec \
@@ -1151,7 +1144,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.imsrtpservice@3.1 \
     consumerir.qcom \
     libaudioroute_ext \
-    libcrussp \
     libmfido \
     libmiClstc \
     libmiXmlParser \
@@ -1181,9 +1173,8 @@ PRODUCT_PACKAGES += \
     TimeService \
     TrustedUIService \
     com.qualcomm.qti.gpudrivers.kalama.api33 \
+    SoterService \
     uimgbaservice \
-    HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
-    HotwordEnrollmentYGoogleHEXAGON_WIDEBAND \
     ImsRcsService \
     QtiTelephonyService \
     QtiTelephony \
@@ -1192,8 +1183,6 @@ PRODUCT_PACKAGES += \
     uimgbalibrary \
     uimgbamanagerlibrary \
     uimservicelibrary \
-    camerax-vendor-extensions \
-    com.android.hotwordenrollment.common.util \
     com.qualcomm.qti.imscmservice-V2.0-java \
     com.qualcomm.qti.imscmservice-V2.1-java \
     com.qualcomm.qti.imscmservice-V2.2-java \
@@ -1243,8 +1232,6 @@ PRODUCT_PACKAGES += \
     imsdcservice-saidl.xml \
     manifest_android.hardware.drm-service.widevine.xml \
     manifest_identity_credential.xml \
-    manifest_non_qmaa.xml \
-    manifest_non_qmaa_extn.xml \
     qcrilhook-saidl.xml \
     qms-saidl.xml \
     qtiradio-saidl.xml \
@@ -1260,6 +1247,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2-service.xml \
     vendor.qti.hardware.vpp@2.0-service.xml \
     vendor.qti.hardware.wifidisplaysession-service.xml \
+    vendor.qti.qegahal-service.xml \
+    vendor.xiaomi.modem.qms.xml \
     android.hardware.gnss-aidl-service-qti.xml \
     manifest_vendor.xiaomi.hardware.mfidoca.xml \
     manifest_vendor.xiaomi.hardware.mlipay.xml \
@@ -1316,7 +1305,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.media.c2@1.0-service \
     vendor.qti.media.c2audio@1.0-service \
     vendor.qti.secure_element@1.2-service \
-    ims-dataservice-daemon \
+    vendor.xiaomi.modem.qms@1.0-service \
     ims_rtp_daemon \
     imsdaemon \
     init.class_main \
@@ -1376,6 +1365,7 @@ PRODUCT_PACKAGES += \
     time_daemon \
     trusteduilistener \
     vendor.dpmd \
+    vendor.qti.qegahal-service \
     vendor.qti.qspmhal@1.0-service \
     vendor_modprobe \
     vppservice \
